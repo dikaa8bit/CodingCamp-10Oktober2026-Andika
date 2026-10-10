@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <button id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+        </svg>
+    </button>
+
+    <div class="card header-card">
+        <h1 id="time-display">00:00:00</h1>
+        <p id="date-display">Date</p>
+        <h2 id="greeting-display">Good Morning</h2>
+    </div>
+
+    <div class="main-container">
+        <div class="left-column">
+
+            <div class="card">
+                <h3>Focus Timer</h3>
+                <h1 id="timer-display" class="timer">25:00</h1>
+                <div class="timer-controls">
+                    <button id="start-btn">Start</button>
+                    <button id="stop-btn">Stop</button>
+                    <button id="reset-btn" class="btn-secondary">Reset</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Quick Links</h3>
+                <div class="input-group quick-links-form">
+                    <input type="text" id="link-name" placeholder="Link name">
+                    <input type="text" id="link-url" placeholder="URL (e.g., https://google.com)">
+                    <button id="add-link-btn">Add Link</button>
+                </div>
+                <div id="links-container"></div>
+            </div>
+        </div>
+
+        <div class="right-column">
+
+            <div class="card">
+                <h3>Tasks</h3>
+                <div class="input-group">
+                    <input type="text" id="task-input" placeholder="Add a new task...">
+                    <button id="add-task-btn">Add</button>
+                </div>
+                <ul id="task-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
